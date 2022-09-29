@@ -1,0 +1,122 @@
+@import "../../styles/globals.scss";
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code&display=swap");
+
+.coverImage {
+  max-width: 900px;
+  width: 100%;
+  margin: auto;
+  display: block;
+}
+
+.postContainer {
+  @media screen and (min-width: $break-md) {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+}
+
+.titleContainer {
+  max-width: 900px;
+  width: 100%;
+
+  @media screen and (max-width: $break-sm) {
+    max-width: 100%;
+  }
+}
+
+// Post rendering styles (like Tailwind `prose`)
+.post {
+  max-width: 800px;
+
+  & h1 {
+    font-size: $heading1-md;
+    margin-top: 0px;
+  }
+
+  & h2 {
+    font-size: $heading2-md;
+  }
+
+  & h3 {
+    font-size: $heading3-md;
+  }
+
+  & h4 {
+    font-size: $heading4-md;
+  }
+
+  & h5 {
+    font-size: $heading5-md;
+  }
+
+  & p {
+    font-size: $body1-md;
+  }
+
+  & small {
+    font-size: $body2-md;
+  }
+
+  & li {
+    margin: 10px 0px 10px 3px;
+    font-size: $body1-md;
+  }
+
+  & a {
+    color: $link;
+    text-decoration: underline;
+  }
+
+  & .hljs {
+    margin: 20px 0px 20px 0px;
+  }
+
+  & code {
+    padding: 3px 5px 3px 5px;
+    font-family: "Fira Code", "Ubuntu Mono", monospace;
+  }
+
+  & pre {
+    border-radius: 0px;
+
+    & code {
+      border-radius: 0px;
+      background-color: $code-background;
+      color: $code-foreground;
+    }
+  }
+
+  & iframe {
+    width: 100%;
+    min-height: 500px;
+  }
+
+  & img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: auto;
+  }
+
+  & hr {
+    border: 1px solid #eee;
+    margin: 30px 0px 30px 0px;
+  }
+
+  & blockquote {
+    border-left: 3px solid $blockquote;
+    padding: 10px 0px 10px 20px;
+    margin: 0px;
+  }
+
+  @media screen and (prefers-color-scheme: dark) {
+    & a {
+      color: $link-dark;
+    }
+  }
+
+  @media screen and (max-width: $break-sm) {
+    max-width: 100% !important;
+  }
+}
